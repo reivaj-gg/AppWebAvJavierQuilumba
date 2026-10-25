@@ -1,0 +1,13 @@
+# WorkBuddy AI internal project data
+.workbuddy-ai/
+
+# Windows / OS noise
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Local editor settings
+.vscode/
+.idea/
+*.suo
+*.user

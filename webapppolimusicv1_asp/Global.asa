@@ -1,0 +1,32 @@
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server">
+'================================================================
+' Global.asa - Application and Session configuration for PoliMusic
+' Must sit in the root folder of the IIS application.
+'================================================================
+
+Sub Application_OnStart
+    Application("AppTitle") = "PoliMusic"
+    Application("AppVersion") = "1.0"
+End Sub
+
+Sub Session_OnStart
+    ' Session timeout in minutes
+    Session.Timeout = 30
+
+    ' Session values start empty; login.asp fills them in.
+    Session("userId") = ""
+    Session("username") = ""
+    Session("userType") = ""
+    Session("email") = ""
+    Session("userPhoto") = ""
+End Sub
+
+Sub Session_OnEnd
+    ' The Session object is read-only while it is ending,
+    ' so there is nothing to write here.
+End Sub
+
+Sub Application_OnEnd
+    ' Nothing to release.
+End Sub
+</SCRIPT>
