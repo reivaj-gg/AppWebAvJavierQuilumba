@@ -11,3 +11,6 @@ desktop.ini
 .idea/
 *.suo
 *.user
+.vs
+bin
+obj
